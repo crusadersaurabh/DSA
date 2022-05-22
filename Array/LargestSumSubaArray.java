@@ -23,21 +23,36 @@ public class LargestSumSubaArray {
 
 
 
-    int maxend = arr[0];
-    int max = arr[0];
-    for (int i = 1; i < arr.length; i++) {
+    // int maxend = arr[0];
+    // int max = arr[0];
+    // for (int i = 1; i < arr.length; i++) {
 
-        if (arr[i] > maxend + arr[i]) {
-            maxend = arr[i];
-        } else {
-            maxend = maxend + arr[i];
-        }
-        if (max < maxend) {
-            max = maxend;
-        }
-    }
+    //     if (arr[i] > maxend + arr[i]) {
+    //         maxend = arr[i];
+    //     } else {
+    //         maxend = maxend + arr[i];
+    //     }
+    //     if (max < maxend) {
+    //         max = maxend;
+    //     }
+    // }
 
-    System.out.println(max);
+    // System.out.println(max);
+
+
+
+
+
+
+    for(int i=0;i<arr.length;i++)
+        {
+            cursum = cursum+arr[i];
+            if(cursum>maxsum)
+            maxsum=cursum;
+            if(cursum<0)
+            cursum=cursum;
+        }
+        System.out.println(maxsum);
 }
 
 
